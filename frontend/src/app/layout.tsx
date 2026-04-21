@@ -1,0 +1,25 @@
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import { Providers } from '@/components/Providers';
+import { GlobalToast } from '@/components/ui/Toast';
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: 'JobAI — AI-Powered Job Matching',
+  description: 'Find your perfect job with AI-powered skill matching',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body className={`${inter.className} bg-gray-50 text-gray-900 antialiased`}>
+        <Providers>
+          <GlobalToast />
+          {children}
+        </Providers>
+      </body>
+    </html>
+  );
+}
