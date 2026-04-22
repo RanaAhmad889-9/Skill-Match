@@ -29,7 +29,7 @@ app.use(errorHandler);
 const start = async () => {
   await connectDB();
   app.listen(Number(env.PORT), () => {
-    console.log(`🚀 Server running on http://localhost:${env.PORT}`);
+    console.log(` Server running on http://localhost:${env.PORT}`);
   });
 };
 
