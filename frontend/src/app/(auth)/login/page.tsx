@@ -51,7 +51,7 @@ export default function LoginPage() {
             <Zap size={22} className="text-white" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Welcome back</h1>
-          <p className="text-sm text-gray-500 mt-1">Sign in to your JobAI account</p>
+          <p className="text-sm text-gray-500 mt-1">Sign in to your SkillMatch account</p>
         </div>
 
         <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
@@ -84,8 +84,8 @@ export default function LoginPage() {
 
           <div className="mt-4 p-3 bg-gray-50 rounded-xl text-xs text-gray-500 leading-relaxed">
             <strong className="text-gray-700">Demo accounts:</strong><br />
-            Admin: admin@jobai.com / admin123<br />
-            User: user@jobai.com / user1234
+            Admin: admin@skillmatch.com / admin123<br />
+            User: user@skillmatch.com / user1234
           </div>
 
           <p className="text-center text-sm text-gray-500 mt-5">

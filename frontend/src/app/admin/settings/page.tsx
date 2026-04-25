@@ -28,7 +28,7 @@ export default function AdminSettingsPage() {
           <h2 className="text-sm font-semibold text-gray-800 mb-4">General</h2>
           <div className="grid grid-cols-2 gap-4">
             <Input label="Platform name" defaultValue="JobAI" />
-            <Input label="Admin email" type="email" defaultValue="admin@jobai.com" />
+            <Input label="Admin email" type="email" defaultValue="admin@skillmatch.com" />
             <div className="flex flex-col gap-1.5">
               <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">JWT expiry</label>
               <select className="px-3 py-2 bg-gray-50 border border-gray-200 rounded-xl text-sm outline-none focus:border-brand-500">

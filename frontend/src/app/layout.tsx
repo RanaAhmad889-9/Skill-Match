@@ -7,8 +7,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'JobAI — AI-Powered Job Matching',
-  description: 'Find your perfect job with AI-powered skill matching',
+  title: 'SkillMatch — Job Matching',
+  description: 'Find your perfect job with SkillMatch',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

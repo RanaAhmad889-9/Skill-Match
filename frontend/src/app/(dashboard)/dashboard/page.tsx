@@ -40,7 +40,7 @@ export default function DashboardPage() {
         <h1 className="text-xl font-bold text-gray-900">
           Welcome back, {user?.name?.split(' ')[0]} 👋
         </h1>
-        <p className="text-sm text-gray-500 mt-0.5">Here are your top AI-matched jobs</p>
+        <p className="text-sm text-gray-500 mt-0.5">Here are your top SkillMatched jobs</p>
       </div>
 
       <div className="grid grid-cols-4 gap-3 mb-6">

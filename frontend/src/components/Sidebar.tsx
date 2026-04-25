@@ -45,7 +45,7 @@ export function Sidebar() {
           <div className="w-8 h-8 bg-brand-500 rounded-xl flex items-center justify-center flex-shrink-0">
             <Zap size={15} className="text-white" />
           </div>
-          <span className="font-bold text-gray-900 text-[15px]">JobAI</span>
+          <span className="font-bold text-gray-900 text-[15px]">SkillMatch</span>
           {user?.role === 'ADMIN' && (
             <span className="text-[9px] px-1.5 py-0.5 bg-amber-50 text-amber-700 rounded font-bold ml-auto uppercase tracking-wide">
               Admin

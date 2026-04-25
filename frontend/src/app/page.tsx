@@ -10,7 +10,7 @@ export default function LandingPage() {
             <div className="w-8 h-8 bg-brand-500 rounded-xl flex items-center justify-center">
               <Zap size={15} className="text-white" />
             </div>
-            <span className="font-bold text-gray-900">JobAI</span>
+            <span className="font-bold text-gray-900">SkillMatch</span>
           </div>
           <div className="flex items-center gap-3">
             <Link href="/login" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
@@ -29,14 +29,14 @@ export default function LandingPage() {
       <section className="max-w-4xl mx-auto px-6 pt-24 pb-20 text-center">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-brand-50 text-brand-600 rounded-full text-xs font-bold mb-6 border border-brand-100">
           <Cpu size={12} />
-          AI-Powered Job Matching
+          SkillMatch
         </div>
         <h1 className="text-5xl font-bold text-gray-900 leading-tight mb-6">
           Find jobs that match{' '}
           <span className="text-brand-500">your exact skills</span>
         </h1>
         <p className="text-lg text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed">
-          Upload your resume or add your skills. Our AI matches you to the best jobs,
+          Upload your resume or add your skills. Our System matches you to the best jobs,
           shows your match score, and highlights exactly what you need to land your dream role.
         </p>
         <div className="flex items-center justify-center gap-3">
@@ -58,7 +58,7 @@ export default function LandingPage() {
       <section className="max-w-5xl mx-auto px-6 pb-24">
         <div className="grid grid-cols-3 gap-6">
           {[
-            { icon: Cpu, title: 'AI skill matching', desc: 'Intelligent algorithm matches your skills to job requirements with a precise percentage score.' },
+            { icon: Cpu, title: 'Skill Matching', desc: 'Intelligent algorithm matches your skills to job requirements with a precise percentage score.' },
             { icon: Star, title: 'Skill gap analysis', desc: "See exactly which skills you're missing for each job so you can level up strategically." },
             { icon: Shield, title: 'Resume parsing', desc: 'Upload your PDF resume and we automatically extract all your skills in seconds.' },
           ].map(({ icon: Icon, title, desc }) => (
