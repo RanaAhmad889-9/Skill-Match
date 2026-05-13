@@ -1,5 +1,5 @@
 import 'express-async-errors';
-import express from 'express';
+import express, { Request, Response } from 'express';
 import cors from 'cors';
 import { env } from './config/env';
 import connectDB from './config/db';
@@ -19,7 +19,12 @@ app.use(
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/health', (_, res) => res.json({ status: 'ok', timestamp: new Date() }));
+app.get('/health', (_: Request, res: Response) =>
+  res.json({
+    status: 'ok',
+    timestamp: new Date(),
+  })
+);
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/jobs', jobRoutes);
