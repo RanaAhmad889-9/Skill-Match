@@ -32,7 +32,7 @@ export default function AdminJobsPage() {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    dispatch(fetchAllJobs());
+    dispatch(fetchAllJobs({}));
   }, [dispatch]);
 
   const openCreate = () => { setEditJob(null); setForm(EMPTY); setSkillInput(''); setModal(true); };

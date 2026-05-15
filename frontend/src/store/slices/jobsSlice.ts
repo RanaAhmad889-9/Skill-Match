@@ -16,7 +16,10 @@ const initialState: JobsState = {
   selectedJob: null,
 };
 
-export const fetchAllJobs = createAsyncThunk(
+export const fetchAllJobs = createAsyncThunk<
+  Job[],
+  { status?: string; type?: string; search?: string } | undefined
+>(
   'jobs/fetchAll',
   async (filters: { status?: string; type?: string; search?: string } = {}, { rejectWithValue }) => {
     try {

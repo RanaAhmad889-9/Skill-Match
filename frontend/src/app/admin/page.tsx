@@ -15,7 +15,7 @@ export default function AdminOverviewPage() {
   const loading = useAppSelector(selectJobsLoading);
 
   useEffect(() => {
-    dispatch(fetchAllJobs());
+    dispatch(fetchAllJobs({}));
     dispatch(fetchAllUsers());
   }, [dispatch]);
 
