@@ -10,7 +10,7 @@ export default function AdminAnalyticsPage() {
   const loading = useAppSelector(selectJobsLoading);
 
   useEffect(() => {
-    dispatch(fetchAllJobs());
+    dispatch(fetchAllJobs({}));
   }, [dispatch]);
 
   const skillFreq: Record<string, number> = {};
