@@ -9,11 +9,16 @@ import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Pencil, Trash2, Plus, X } from 'lucide-react';
 
+
+type JobType = "Full-time" | "Part-time" | "Contract" | "Remote";
+type JobStatus = "Active" | "Draft" | "Closed";
+
 interface JobForm {
   title: string; company: string; description: string;
-  location: string; type: string; status: string;
+  location: string; type: JobType; status: JobStatus;
   salary: string; requiredSkills: string[];
 }
+
 
 const EMPTY: JobForm = {
   title: '', company: '', description: '',
@@ -189,7 +194,7 @@ export default function AdminJobsPage() {
                   onChange={(e) => setForm({ ...form, location: e.target.value })} />
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">Job type</label>
-                  <select value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value })}
+                  <select value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value as JobType })}
                     className="px-3 py-2 bg-gray-50 border border-gray-200 rounded-xl text-sm outline-none focus:border-brand-500">
                     {['Full-time', 'Part-time', 'Contract', 'Remote'].map((t) => <option key={t}>{t}</option>)}
                   </select>
@@ -198,7 +203,7 @@ export default function AdminJobsPage() {
                   onChange={(e) => setForm({ ...form, salary: e.target.value })} />
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-bold text-gray-500 uppercase tracking-wide">Status</label>
-                  <select value={form.status} onChange={(e) => setForm({ ...form, status: e.target.value })}
+                  <select value={form.status} onChange={(e) => setForm({ ...form, status: e.target.value as JobStatus })}
                     className="px-3 py-2 bg-gray-50 border border-gray-200 rounded-xl text-sm outline-none focus:border-brand-500">
                     <option>Active</option><option>Draft</option>
                   </select>
